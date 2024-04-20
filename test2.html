@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Homepage</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            display: none;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body onload="showPage('resume')">
+    <nav>
+        <a href="#" onclick="showPage('resume')">Resume</a>
+        <a href="#" onclick="showPage('manuscript')">Manuscript</a>
+        <a href="#" onclick="showPage('project')">Project</a>
+        <a href="#" onclick="showPage('presentation')">Presentation</a>
+    </nav>
+    <section id="resume">
+        <h2>Resume</h2>
+        <!-- Add your resume content here -->
+        <h3>Yunlong Li</h3>
+        <p>Email: mikamijpen@mail.dlut.edu.cn</p>
+        <img src="resume.jpg" alt="Resume Image">
+        <p><i>“just for fun and a colorful leaving.”</i></p>
+        <br>
+        <h3> education</h3>
+        <div style="white-space: pre;">
+    I'm born in HeFei, China, 2003. Graduated from the Hefei No.1 High School,
+who cultivated my desire for exploration.
+    Now I am a junior(2024) in the Department of Computer Science, Dalian University of Technology,
+who taught me the approach to exploration.
+    In the near future, I'll embark on real journey of exploration.</div>
+        <br>
+
+        <h3> habit</h3>
+        <div style="white-space: pre;">
+I'm a big fan of
+    jogging
+
+    climbing
+    <img src="climb.jpg" alt="Resume Image" width="500" height="300">
+
+    communication
+    <img src="com.jpg" alt="Resume Image" width="500" height="300">
+
+        </div>
+    </section>
+    <section id="manuscript">
+        <h2>Manuscript</h2>
+        <!-- Add your manuscript content here -->
+
+        <p>You can see all of my ML notes in the
+            <a href="https://www.yuque.com/sanshangjingjie/hr708c" target="_blank">
+                repository</a>,
+            and some of what I'd like to explore most are as follows:</p>
+        <p><a href="https://www.runoob.com"target="_blank">
+            theory prospects</a></p>
+    </section>
+    <section id="project">
+        <h2>Project</h2>
+        <!-- Add your project content here -->
+        <p>This is where you can put your project content.</p>
+    </section>
+    <section id="presentation">
+        <h2>Presentation</h2>
+        <!-- Add your presentation content here -->
+        <p>
+            [TGRS2024]Text-Guided Diverse Image Synthesis for
+Long-Tailed Remote Sensing Object Recognition(major revision)</p>
+        <img src="TGN.jpg" alt="Resume Image">
+    </section>
+
+    <script>
+        // JavaScript function to show/hide sections based on clicked link
+        function showPage(pageId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            var selectedSection = document.getElementById(pageId);
+            selectedSection.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
